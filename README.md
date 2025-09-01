@@ -1,42 +1,47 @@
 # Meals App
 
-A small Flutter app for browsing meals, viewing meal details, and marking favorites. Built with Flutter and Riverpod for state management.
+Meals App is a Flutter application to browse meals, view details, and mark favorites. It demonstrates clean UI, navigation, animations, and state management with Riverpod.
 
 ## Features
-- List of meals and category-based filtering
-- Meal details with ingredients and steps
-- Favorite toggle with animated icon and SnackBar feedback
-- Optional AppBar for screens (reusable MealsScreen)
 
-## Requirements
-- Flutter (stable) SDK installed
-- Dart (comes with Flutter)
-- Compatible device/emulator (Android, iOS, or desktop)
+- Browse meals and open detailed pages
+- Mark/unmark meals as favorites (Riverpod StateNotifier)
+- Smooth image loading with Hero + FadeInImage
+- Animated favorite icon (AnimatedSwitcher + ScaleTransition)
+- Responsive layout
 
-## Setup & Run
-1. Open a terminal in the project folder:
-   - Windows (PowerShell/CMD): cd "c:\Users\10ire\OneDrive\Desktop\flutter_projects\fifth_app"
-2. Get packages:
-   flutter pub get
-3. Run the app:
-   flutter run
-   (or choose a specific device: flutter run -d <device-id>)
+## Tech Stack
 
-## Project Structure (key files)
-- lib/main.dart — app entry
-- lib/screens/meals.dart — meals list screen
-- lib/screens/meal_details.dart — meal details and favorite toggle
-- lib/widgets/meal_item.dart — meal list item widget
-- lib/models/meal.dart — Meal model
-- lib/providers/favorites_provider.dart — favorites state (Riverpod)
+- Flutter, Dart
+- flutter_riverpod (state management)
+- Navigator 1.0 (routing)
+- Hero, AnimatedSwitcher, ScaleTransition (animations)
+- transparent_image (placeholder image)
 
-## Tests
-No automated tests included yet. Add tests under the `test/` folder.
+## Getting Started
 
-## Contributing
-- Follow existing code style.
-- Use clear commit messages (e.g., feat/, fix/, refactor/).
-- Open issues or pull requests for changes.
+Prerequisites:
+- Flutter SDK installed: https://docs.flutter.dev/get-started/install
+
+Run locally:
+1. flutter pub get
+2. flutter run
+
+## Project Structure
+
+- lib/models: Data models (e.g., Meal)
+- lib/providers: Riverpod providers (favorites, etc.)
+- lib/widgets: Reusable UI components (MealItem, traits)
+- lib/screens: App screens (Meals list, Meal details)
+
+## How It Works
+
+- Favorites: favoriteMealsProvider manages a List<Meal> via StateNotifier. Toggling updates state and UI.
+- Navigation: Navigator.push to open MealDetailsScreen.
+- Animations: 
+  - Hero for shared image transitions between list and detail.
+  - AnimatedSwitcher + ScaleTransition to animate the favorite icon.
 
 ## License
-Specify your license here (e.g., MIT) or remove this section if not applicable.
+
+This project is for learning
