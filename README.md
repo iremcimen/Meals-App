@@ -1,29 +1,42 @@
 # Meals App
 
-Meals App is a Flutter application that helps users browse, view, and favorite different meal recipes. The app demonstrates key Flutter concepts such as navigation, state management, and custom widgets.
+A small Flutter app for browsing meals, viewing meal details, and marking favorites. Built with Flutter and Riverpod for state management.
 
 ## Features
+- List of meals and category-based filtering
+- Meal details with ingredients and steps
+- Favorite toggle with animated icon and SnackBar feedback
+- Optional AppBar for screens (reusable MealsScreen)
 
-- Browse meals by category
-- View detailed information about each meal
-- Mark meals as favorites
-- Responsive and clean UI
+## Requirements
+- Flutter (stable) SDK installed
+- Dart (comes with Flutter)
+- Compatible device/emulator (Android, iOS, or desktop)
 
-## Getting Started
+## Setup & Run
+1. Open a terminal in the project folder:
+   - Windows (PowerShell/CMD): cd "c:\Users\10ire\OneDrive\Desktop\flutter_projects\fifth_app"
+2. Get packages:
+   flutter pub get
+3. Run the app:
+   flutter run
+   (or choose a specific device: flutter run -d <device-id>)
 
-To run this project:
+## Project Structure (key files)
+- lib/main.dart — app entry
+- lib/screens/meals.dart — meals list screen
+- lib/screens/meal_details.dart — meal details and favorite toggle
+- lib/widgets/meal_item.dart — meal list item widget
+- lib/models/meal.dart — Meal model
+- lib/providers/favorites_provider.dart — favorites state (Riverpod)
 
-1. Make sure you have [Flutter](https://docs.flutter.dev/get-started/install) installed.
-2. Clone this repository.
-3. Run flutter pub get to install dependencies.
-4. Start the app with flutter run.
+## Tests
+No automated tests included yet. Add tests under the `test/` folder.
 
-## Resources
-
-- [Flutter Documentation](https://docs.flutter.dev/)
-- [Flutter Cookbook](https://docs.flutter.dev/cookbook)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+## Contributing
+- Follow existing code style.
+- Use clear commit messages (e.g., feat/, fix/, refactor/).
+- Open issues or pull requests for changes.
 
 ## License
-
-This project
+Specify your license here (e.g., MIT) or remove this section if not applicable.
